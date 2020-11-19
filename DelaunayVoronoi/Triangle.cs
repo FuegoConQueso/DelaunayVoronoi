@@ -28,6 +28,7 @@ namespace DelaunayVoronoi
 
         public Triangle(Point point1, Point point2, Point point3)
         {
+            // (Note from original author:)
             // In theory this shouldn't happen, but it was at one point so this at least makes sure we're getting a
             // relatively easily-recognised error message, and provides a handy breakpoint for debugging.
             if (point1 == point2 || point1 == point3 || point2 == point3)
@@ -91,6 +92,19 @@ namespace DelaunayVoronoi
             var sharedVertices = Vertices.Where(o => triangle.Vertices.Contains(o)).Count();
             return sharedVertices == 2;
         }
+
+        //public Edge SharedEdge(Triangle triangle)
+        //{
+        //    var sharedEdge = Vertices.Where(o => triangle.Vertices.Contains(o)).ToList();
+        //    if (sharedEdge.Count == 2)
+        //    {
+        //        return new Edge(sharedEdge[0], sharedEdge[1]);
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
 
         public bool IsPointInsideCircumcircle(Point point)
         {

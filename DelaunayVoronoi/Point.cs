@@ -25,6 +25,12 @@ namespace DelaunayVoronoi
             Y = y;
         }
 
+        public Point(Point other)
+        {
+            X = other.X;
+            Y = other.Y;
+        }
+
         public override string ToString()
         {
             // Simple way of seeing what's going on in the debugger when investigating weirdness

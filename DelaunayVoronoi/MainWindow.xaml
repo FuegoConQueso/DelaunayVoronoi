@@ -40,6 +40,6 @@
             </Grid>
             <Grid />
         </DockPanel>
-        <Canvas Name="Canvas" Margin="20,20,20,20" />
+        <Canvas Name="Canvas" Margin="20,20,20,20" Background="White" />
     </DockPanel>
 </Window>
